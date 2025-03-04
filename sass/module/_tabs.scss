@@ -1,0 +1,164 @@
+.tabSet {
+  margin: 30px auto;
+  // .tabItems {
+  //   display: flex;
+  //   flex-flow: row nowrap;
+  //   margin: 0 auto;
+  //   button {
+  //     flex: 1 1 auto;
+  //     font-size: 1em;
+  //     height: 2.8em;
+  //     text-align: center;
+  //     border: none;
+  //     margin: 1px;
+  //     border-radius: 0;
+  //     box-shadow: none;
+  //     background: #ddd;
+  //     cursor: pointer;
+  //     &:hover {
+  //       background: #cdd;
+  //     }
+  //     &:focus-visible {
+  //       outline: none;
+  //       box-shadow: 0 0px 0px 2px $aFocus inset;
+  //       @include screen('mobile') {
+  //         box-shadow: none;
+  //       }
+  //     }
+  //     &.active {
+  //       cursor: default;
+  //       background: $colorPrimary;
+  //       color: #fff;
+  //     }
+  //   }
+  // }
+
+  // .tabContent {
+  //   display: none;
+  //   position: relative;
+  //   padding: 15px;
+  //   box-shadow: #bbb 0 0 0 1px inset;
+  //   &.active {
+  //     display: block;
+  //   }
+  //   a:focus {
+  //     outline: none;
+  //     box-shadow: 0 0px 0px 2px $aFocus inset;
+  //     @include screen('mobile') {
+  //       box-shadow: none;
+  //     }
+  //   }
+  // }
+
+  // &.onMobile {
+  //   .tabContent {
+  //     display: block;
+  //     box-shadow: none;
+  //     padding: 0;
+  //     .tabBtn {
+  //       width: 100%;
+  //       margin: 0 0 5px 0;
+  //       &.active {
+  //         background: $colorPrimary;
+  //         color: #fff;
+  //         border-color: $colorPrimary;
+  //       }
+  //     }
+  //     a:focus {
+  //       outline: none;
+  //       box-shadow: 0 0px 0px 2px #1aadfa inset;
+  //     }
+  //   }
+  //   .content {
+  //     display: none;
+  //     &.active {
+  //       display: block;
+  //     }
+  //   }
+  // }
+
+  .tabItems {
+    display: flex;
+  }
+
+  .modeBBtn,
+  .tabBtn {
+    flex: 1 1 auto;
+    font-size: 1em;
+    height: 2.8em;
+    text-align: center;
+    border: none;
+    margin: 1px;
+    border-radius: 0;
+    box-shadow: none;
+    background: #ddd;
+    cursor: pointer;
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0 0px 0px 2px $aFocus inset;
+    }
+
+    &.active {
+      cursor: default;
+      background: #00a4f9;
+      color: #fff;
+    }
+  }
+
+
+  .tabContent {
+    display: none;
+    position: relative;
+    padding: 15px;
+    box-shadow: #bbb 0 0 0 1px inset;
+
+
+    &.active {
+      display: block;
+    }
+
+    a:focus {
+      outline: none;
+      box-shadow: 0 0px 0px 2px $aFocus inset;
+
+      @include screen('mobile') {
+        box-shadow: none;
+      }
+    }
+
+    .content {
+      ul {
+        margin: 0;
+      }
+    }
+  }
+
+  .modeBBtn {
+    width: 100%;
+    margin: 0;
+    display: none;
+  }
+
+  &.modeB {
+    .tabItems {
+      display: none;
+    }
+
+    .tabContent {
+      display: block;
+
+      .content {
+        display: none;
+
+        a:focus-visible {
+          outline: $aFocus 2px solid;
+        }
+      }
+    }
+
+    .modeBBtn {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,294 @@
+// mobile btn for extend
+// menu
+
+@mixin mobileCtrlBtn {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 0px;
+  display: none;
+  font-size: 0em;
+  padding: 15px;
+  margin: 0;
+  min-width: auto;
+  min-height: auto;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  z-index: 100;
+
+  @include screen('mobile') {
+    display: block;
+  }
+}
+
+.sidebarCtrlBtn {
+  display: none;
+  left: 0px;
+  @include mobileCtrlBtn;
+
+  &::before {
+    position: absolute;
+    content: '';
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 2px;
+    background: $colorPrimary;
+    box-shadow: $colorPrimary 0 6px 0 0, $colorPrimary 0 -6px 0 0;
+    transition: 0.2s linear;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: $colorPrimary;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 0.2s linear;
+  }
+
+  // &:hover {
+  //   &::before {
+  //     transform: translate(-50%, -50%) rotate(45deg);
+  //     box-shadow: none;
+  //   }
+  //   &::after {
+  //     opacity: 1;
+  //     transform: translate(-50%, -50%) rotate(-45deg);
+  //   }
+  // }
+}
+
+// search
+.searchCtrlBtn {
+  display: none;
+  right: 0px;
+  font-size: 0em;
+  z-index: 9;
+  @include mobileCtrlBtn;
+
+  &:before {
+    width: 40px;
+    height: 40px;
+    background: url(../images/basic/icon_search.svg) no-repeat center center;
+    background-size: 28px;
+    opacity: 0.6;
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: block;
+  }
+}
+
+//header
+.header {
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  transition: 0.3s ease-out;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+  @include screen('mobile') {
+    position: fixed;
+    width: 100%;
+  }
+
+  &:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    pointer-events: none;
+    z-index: -1;
+
+    @include screen('mobile') {
+      height: 60px;
+    }
+  }
+  // &::after {
+  //   position: absolute;
+  //   bottom: 0;
+  //   content: '';
+  //   width: 100%;
+  //   background: $colorPrimary;
+  //   left: 0;
+  //   height: 74px;
+  //   @include screen('mobile') {
+  //     display: none;
+  //   }
+  // }
+  & > .container {
+    max-width: $containerMax;
+    overflow: visible;
+    position: relative;
+
+    @include screen('mobile') {
+      padding: 0;
+    }
+  }
+
+  h1 {
+    float: left;
+    width: 300px;
+    height: 100px;
+    line-height: 100px;
+    margin: 0;
+
+    padding: 0;
+    box-sizing: border-box;
+
+    @include screen('mobile') {
+      float: none;
+      line-height: 60px;
+      font-size: 1.75em;
+    }
+
+    a {
+      display: inline-block;
+      color: $colorPrimary;
+      font-size: 1.75rem;
+    }
+
+    img {
+      display: block;
+      max-width: 300px;
+      max-height: 75px;
+    }
+
+    @include screen('mobile') {
+      padding: 2px 10px 2px 60px;
+      width: 100%;
+      text-align: center;
+      height: 60px;
+      a {
+        font-size: 1.5rem;
+        margin-right: 60px;
+      }
+      img {
+        width: auto;
+        height: auto;
+        max-height: 54px;
+        margin: 0px auto;
+        transform: scale(0.8);
+      }
+    }
+  }
+
+  // 導覽列
+  .navigation {
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+    z-index: 55;
+    align-items: center;
+    height: 100px;
+    @include screen('mobile') {
+      display: none;
+      height: 60px;
+    }
+
+    .navList {
+      flex: 1 1 auto;
+      margin: 0.25em 0.5em 0 0;
+
+      ul {
+        padding: 0;
+        margin: 0;
+        font-size: 1rem;
+        // font-size: 0.875em;
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      li {
+        flex: 0 0 auto;
+
+        a {
+          display: block;
+          padding: 0.5em;
+          text-decoration: none;
+          font-weight: bold;
+          padding: 0.75rem 1.25rem;
+          margin-right: 1rem;
+
+          @include aSetting($colorWord);
+        }
+        &:last-child {
+          a {
+            margin-right: 0;
+          }
+        }
+      }
+      .user {
+        background: $colorPrimary;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        border-radius: 0.25rem;
+        padding: 0.75rem 1.25rem;
+        img {
+          margin-right: 1rem;
+        }
+        &:hover {
+          color: #fff;
+          background: lighten($colorPrimary, 10);
+        }
+      }
+    }
+
+    //右邊區塊
+    .submenuBox {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      background: linear-gradient(135deg, #005d9d 0%, #98d1a7 100%);
+      position: relative;
+
+      & > div {
+        + div::after {
+          content: '';
+          width: 1px;
+          height: 17px;
+          background: #fff;
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+}
+
+.header.typeB {
+  h1 {
+    position: absolute;
+    top: 20px;
+    z-index: 50;
+
+    @include screen('mobile') {
+      position: relative;
+      top: auto;
+    }
+  }
+
+  .navigation {
+    margin-bottom: 40px;
+  }
+}

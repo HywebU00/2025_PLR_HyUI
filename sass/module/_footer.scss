@@ -1,0 +1,176 @@
+footer {
+  clear: both;
+  text-align: left;
+  font-size: 1em;
+  padding: 1em 0;
+  background: $colorPrimary;
+  .container {
+    justify-content: space-between;
+    @include gutter;
+    & > div {
+      padding-bottom: 0.5em;
+    }
+    // display: flex;
+    @include screen('tablet') {
+      flex-wrap: wrap;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: $colorPrimary;
+    &:hover,
+    &:focus-visible {
+      color: darken($colorPrimary, 10);
+    }
+  }
+  .footerLogo {
+    flex: 0 1 220px;
+    margin-top: rem(30);
+    position: relative;
+    img {
+      background: $colorPrimary;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      width: calc(100% - 230px);
+      height: 2px;
+
+      background: #adadad;
+      left: 230px;
+      top: 16px;
+    }
+  }
+  .footerInfo {
+    flex: 1 1 auto;
+    display: flex;
+    width: 100%;
+    > div {
+      width: 100%;
+    }
+    @include screen('tablet') {
+      flex-wrap: wrap;
+      .footerIcon {
+        margin-top: 2em;
+      }
+    }
+  }
+  .footerIcon {
+    flex: 0 1 200px;
+    text-align: right;
+    @include screen('tablet') {
+      flex: 1 1 100%;
+    }
+  }
+  // 版權連結
+  .footerLink {
+    @include liReset();
+    clear: both;
+    display: flex;
+    margin-bottom: 10px;
+    @include screen('mobile') {
+      flex-flow: row wrap;
+    }
+    li {
+      flex: 0 1 auto;
+
+      @include screen('xsMobile') {
+        // flex: 1 1 25%;
+        margin-bottom: 0.25em;
+      }
+      a {
+        display: block;
+
+        padding-right: 3em;
+
+        background: $colorPrimary;
+        color: #fff;
+        text-align: center;
+        transition: 0.3s ease-out;
+        white-space: nowrap;
+        position: relative;
+        &::after {
+          content: '';
+          position: absolute;
+          width: 2px;
+          right: 1.5em;
+          top: 4px;
+          height: 14px;
+          background: #adadad;
+        }
+
+        &:hover,
+        &:focus-visible {
+          // background: darken($colorPrimary, 10);
+        }
+      }
+      &:last-child {
+        a {
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  p {
+    line-height: 2em;
+    margin: 0;
+    color: #fff;
+  }
+  .update,
+  .counter {
+    display: inline-block;
+    margin-right: 5px;
+    em {
+      font-style: normal;
+      color: $colorPrimary;
+      padding: 0 0.5em;
+    }
+  }
+  .footerIcon {
+    a {
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      &:focus-visible {
+        &:after {
+          content: '';
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          box-shadow: 0px 0px 0px 1px $aHover inset;
+          z-index: 99;
+        }
+      }
+    }
+    img {
+      max-width: 150px;
+    }
+  }
+}
+
+footer.typeB {
+  padding-top: 3%;
+  background: #014072;
+  .container {
+    justify-content: space-between;
+  }
+  .footerInfo {
+    color: #fff;
+  }
+  .footerLink {
+    li a {
+      padding: 0;
+      padding: 0 0 0 20px;
+      text-align: right;
+      background: none;
+      font-size: rem(14);
+    }
+  }
+  .footerIcon {
+    text-align: right;
+  }
+}
