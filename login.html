@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+  <meta name="robots" content="noindex" />
+  <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>文化部公共出借權登記系統</title>
+
+  <!-- style css -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- favicon -->
+  <link href="images/favicon.png" rel="icon" type="image/x-icon" />
+</head>
+
+<body>
+  <!-- 直接跳主內容區 -->
+  <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
+  <!-- wrapper Start -->
+  <div class="wrapper">
+    <!-- header Start -->
+    <header class="header">
+      <div class="container">
+        <a class="accessKey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+        <h1>
+          <a href="index.html">公共出借權登記系統</a>
+        </h1>
+        <!-- navigation Start -->
+        <nav class="navigation" role="navigation" aria-label="Site">
+          <!-- 新增div navList -->
+          <div class="navList">
+            <ul>
+              <li><a href="#">首頁</a></li>
+              <li><a href="#" class="user"><img src="images/icon_user.png" alt="">登入</a></li>
+              <li><a href="#">帳號維護</a></li>
+            </ul>
+          </div>
+        </nav>
+        <!-- navigation End -->
+        <noscript>
+          您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結
+          <a href="#">網站導覽</a>
+        </noscript>
+        <!-- menu Start -->
+        <nav class="menu mainMenu" role="navigation" aria-label="About page">
+          <ul>
+            <li><a href="#">關於公共出借權實施</a></li>
+            <li><a href="#">如何申請</a></li>
+            <li><a href="#">常見問答</a></li>
+            <li><a href="#">下載專區</a></li>
+          </ul>
+        </nav>
+        <!-- menu End -->
+      </div>
+    </header>
+    <!-- header End -->
+    <!-- main Start -->
+    <main id="center" class="main innerPage">
+      <!-- 內頁新增一個classname-->
+      <a class="accessKey" href="#aC" id="ac" accesskey="C" title="主要內容區">:::</a>
+      <div class="container">
+        <!-- 主要內容區 -->
+        <div class="centerBlock">
+          <!-- breadcrumb路徑 -->
+          <nav aria-label="Breadcrumb" class="breadcrumb">
+            <ul>
+              <li><a href="#">首頁</a></li>
+              <li><a href="#">節點</a></li>
+              <li aria-current="page">節點</li>
+            </ul>
+          </nav>
+          <!-- h3節點 -->
+          <h2 class="loginTitle title"><span>使用者登入</span></h2>
+          <!-- login Start -->
+          <section class="login full">
+            <div class="card">
+              <div class="flexForm formGrid">
+                <form action="">
+                  <div class="formGrp">
+                    <!-- 使用aria-required屬性指出必填的表單欄位 -->
+                    <label for="username" class="formTitle" aria-required="true">帳號<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                    <div class="formContent">
+                      <div class="input_i">
+                        <i class="i_man_dark"></i>
+                        <input type="text" id="username" placeholder="請輸入帳號(統編或身分證字號)" value="" title="請輸入帳號" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="formGrp">
+                    <label for="email" class="formTitle" aria-required="true">E-mail<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                    <div class="formContent">
+                      <div class="input_i">
+                        <i class="i_mail_dark"></i>
+                        <input name="email" type="email" id="email" title="請輸入E-mail" placeholder="請輸入E-mail" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="formGrp">
+                    <label for="password" class="formTitle" aria-required="true">密碼<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                    <div class="formContent">
+                      <div class="input_i">
+                        <i class="i_lock_dark"></i>
+                        <input class="passWord" name="password" type="password" placeholder="請輸入密碼" title="請輸入密碼" />
+                      </div>
+                      <!-- <div class="noticeError">您輸入的帳號密碼有誤！</div> -->
+                    </div>
+                  </div>
+                  <div class="formGrp">
+                    <div class="formTitle">驗證碼</div>
+                    <div class="formContent formInline">
+                      <input class="captchaText" name="" type="text" value="" placeholder="請輸入驗證碼" title="請輸入驗證碼" />
+                      <img src="images/basic/captcha.gif" alt="" class="captcha" />
+                      <button type="button" class="btn"><i class="i_reflash_dark" aria-hidden="true" focusable="false"></i></button>
+                      <button type="button" class="btn"><i class="i_play_dark" aria-hidden="true" focusable="false"></i></button>
+                    </div>
+                  </div>
+                  <div class="btnGrp">
+                    <button type="button" class="btn btnSubmit">登入</button>
+                  </div>
+                  <div class="btnGrp btnLink">
+                    <div class=""><a href="">忘記密碼?</a></div>
+                    <div class="">沒有帳號，立即<a href="">註冊帳號</a></div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+          <!-- login End -->
+        </div>
+      </div>
+    </main>
+
+    <!-- footer Start-->
+    <footer>
+      <div class="container">
+        <a class="accessKey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
+        <div class="footerLogo">
+          <img src="images/f_logo.png" alt="" class="imgResponsive" />
+        </div>
+        <div class="footerInfo">
+          <div class="">
+            <ul class="footerLink">
+              <li><a href="javascript:;">隱私權政策</a></li>
+              <li><a href="javascript:;">網站安全政策</a></li>
+              <li><a href="javascript:;">政府網站資料開放宣告</a></li>
+            </ul>
+            <p class="Copyright">國立公共資訊圖書館版權所有 © 2020 All Rights Reserved.</p>
+            <p>
+              諮詢電話：(04)2262-5100轉1402、1413
+              <br />
+              諮詢信箱：plrservice@nlpi.edu.tw <br />
+              建議瀏覽器：Microsoft Edge、Firefox、Chrome(螢幕設定最佳顯示效果為1280*1024)
+            </p>
+          </div>
+          <div class="footerIcon">
+            <a target="_blank" href="javascript:;" title="另開視窗">
+              <img src="images/basic/accessibility.jpg" alt="" />
+            </a>
+            <a target="_blank" href="javascript:;" title="我的e政府,另開新視窗">
+              <img src="images/basic/egov.png" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer End -->
+  </div>
+  <a href="javascript:;" class="scrollToTop" role="button">回頁首</a>
+
+  <!-- lazyload -->
+  <script src="vendor/lazyload/lazyload.js"></script>
+  <!-- fancybox -->
+  <script src="vendor/fancybox/fancybox.umd.js"></script>
+  <script src="vendor/fancybox/l10n/zh_TW.umd.js"></script>
+  <!-- swiper -->
+  <script src="vendor/swiper/swiper-bundle.min.js"></script>
+  <!-- main js-->
+  <script src="js/main.js"></script>
+  <!-- js -->
+  <script src="js/customize.js"></script>
+</body>
+
+</html>
