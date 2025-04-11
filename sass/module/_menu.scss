@@ -17,7 +17,8 @@
   clear: both;
   min-height: 74px;
   background: $colorPrimary;
-
+  font-size: rem(18);
+  font-weight: 400;
   &.sticky {
     position: fixed;
     top: 0;
