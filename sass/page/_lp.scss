@@ -1,0 +1,30 @@
+.lp {
+  &:has(.questionAccordion) {
+    margin-bottom: 8rem;
+    .questionAccordion {
+      margin-top: 3rem;
+    }
+  }
+}
+
+.questionAccordion {
+  .accordionArrow {
+    &:after {
+      border-color: #000;
+    }
+  }
+
+  ul {
+    li {
+      .accordionList {
+        border-left: 6px solid $colorSecondary;
+        color: #000;
+        background-color: #e9e9e9;
+        padding: 1rem;
+        width: 100%;
+        position: relative;
+        text-align: start;
+      }
+    }
+  }
+}

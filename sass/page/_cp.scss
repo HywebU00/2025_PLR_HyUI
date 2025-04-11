@@ -129,6 +129,15 @@ h2.title {
       top: 45%;
     }
   }
+  > .fileDownload {
+    margin-top: 1.5rem;
+    border-top: 1px solid #222;
+    padding: 3rem 0 2rem 0;
+    &:has(h3) {
+      border-top: none;
+      padding-top: 0rem;
+    }
+  }
 }
 
 // 檔案下載

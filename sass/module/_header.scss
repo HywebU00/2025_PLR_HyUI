@@ -161,6 +161,7 @@
       display: inline-block;
       color: $colorPrimary;
       font-size: 1.75rem;
+      margin-top: 2rem;
     }
 
     img {
@@ -177,6 +178,7 @@
       a {
         font-size: 1.5rem;
         margin-right: 60px;
+        margin-top: 0rem;
       }
       img {
         width: auto;
@@ -235,18 +237,19 @@
         }
       }
       .user {
-        background: $colorPrimary;
-        color: #fff;
+        background: $colorSecondary; //$colorPrimary;
+        color: #000;
         display: flex;
         align-items: center;
         border-radius: 0.25rem;
         padding: 0.75rem 1.25rem;
         img {
           margin-right: 1rem;
+          filter: invert(1);
         }
         &:hover {
-          color: #fff;
-          background: lighten($colorPrimary, 10);
+          color: $colorPrimary;
+          background: lighten($colorSecondary, 5);
         }
       }
     }

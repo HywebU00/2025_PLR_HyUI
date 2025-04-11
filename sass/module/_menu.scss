@@ -52,7 +52,7 @@
     z-index: -1;
     width: 100vw;
     left: calc((50vw - 50%) * -1);
-    background: $colorPrimary;
+    background: $colorSecondary; //$colorPrimary;
 
     min-height: 74px;
     @include screen('mobile') {
@@ -100,7 +100,7 @@
         // color: $colorWord;
         text-align: center;
         box-sizing: border-box;
-        color: #fff;
+        color: #000;
         &:focus-visible {
           box-shadow: 0 0 0 2px inset $aHover;
         }
@@ -128,7 +128,7 @@
       &.active,
       &:hover {
         & > a {
-          color: #dcdcdc; //$aHover;
+          color: $colorPrimary; //$aHover;
 
           &:after {
             border: 2px solid #dcdcdc; //$aHover;

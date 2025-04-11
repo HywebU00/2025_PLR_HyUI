@@ -13,11 +13,11 @@
           height: rem(420);
         }
       }
-      @include screen('tablet') {
-        img {
-          height: rem(300);
-        }
-      }
+      // @include screen('tablet') {
+      //   img {
+      //     height: rem(300);
+      //   }
+      // }
       @include screen('mobile') {
         .swiper-wrapper {
           margin-top: rem(72);

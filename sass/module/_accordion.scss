@@ -18,8 +18,9 @@
         padding: 5px 50px 5px 20px;
         position: relative;
       }
-
-      &.active .accordionArrow {
+    }
+    .active {
+      .accordionArrow {
         top: calc(50% - 2px);
         transform: rotate(225deg);
       }
