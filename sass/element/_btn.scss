@@ -130,6 +130,10 @@
     border: solid 1px #b5deff;
   }
 }
+
+.btnCancel {
+  @include btnSetting(#626060, #fff);
+}
 // 一般按鈕
 .btnNormal {
   background: #f1f1f1;

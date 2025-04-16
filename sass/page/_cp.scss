@@ -389,3 +389,87 @@ h2.title {
     }
   }
 }
+.consentDialog {
+  &.fancybox__content {
+    display: flex !important;
+    padding-bottom: 0.5rem !important;
+  }
+  max-width: rem(800) !important;
+  max-height: calc(100% - 2rem) !important;
+  display: none;
+  margin: 1rem !important;
+  border-radius: 0.2rem !important;
+
+  .card-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-align: center;
+    color: #3a3a3a;
+    line-height: 2rem;
+    padding-bottom: 0.5rem;
+  }
+  .card-content {
+    overflow-y: scroll;
+    color: #222;
+    .danger-text {
+      color: $colorRed;
+    }
+    ul {
+      margin: 0.5rem 0;
+      padding-left: 0;
+      li {
+        padding-left: 1rem;
+        margin-bottom: 1.25rem;
+        list-style: none;
+        ul {
+          li {
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+  .card-actions {
+    padding-top: 0.25rem;
+    > div {
+      display: flex;
+      justify-content: center;
+      button {
+        padding: 0.6rem 1.2rem;
+      }
+      &:has(.danger-text) {
+        padding: 0.5rem 0;
+        .danger-text {
+          color: $colorRed;
+        }
+      }
+    }
+  }
+  .date-text {
+    margin-top: 2rem;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .tableStyle {
+    margin-top: 1rem;
+    max-width: rem(420);
+    overflow-x: scroll;
+    caption {
+      font-size: 0px;
+      height: 0px;
+    }
+  }
+  .fancybox-button.fancybox-button--close {
+    display: none !important;
+  }
+  .f-button.is-close-btn {
+    display: none !important;
+  }
+}
+.fancybox__slide.has-close-btn {
+  padding-top: 0px !important;
+}
+.fancybox__backdrop {
+  background: rgba(0, 0, 0, 0.3) !important;
+}

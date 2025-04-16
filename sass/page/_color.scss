@@ -2,7 +2,8 @@
 // 同版面，多色快速調整 sass map實作
 // 參數可再自行新增
 $colorStyleConfig: (
-  colorA: ( // class 名稱
+  colorA: (
+    // class 名稱
     colorPrimary: #298729,
     colorSecondary: #22be22,
     aHover: mix(#298729, #000, 90%),
@@ -10,7 +11,8 @@ $colorStyleConfig: (
     formFocus: #298729,
     form-btn: #298729,
   ),
-  colorB: ( // class 名稱
+  colorB: (
+    // class 名稱
     colorPrimary: #c32727,
     colorSecondary: red,
     aHover: mix(#00a4f9, #000, 90%),
@@ -24,10 +26,8 @@ $colorStyleConfig: (
 
 @each $item, $value in $colorStyleConfig {
   .#{$item} {
-
     //_font
     a {
-
       // color: map-get($value, colorPrimary);
       &:hover {
         color: map-get($value, colorPrimary);
@@ -37,10 +37,8 @@ $colorStyleConfig: (
     .fontSize {
       ul {
         li {
-
           button,
           a {
-
             &:hover,
             &:focus,
             &.active {
@@ -117,6 +115,7 @@ $colorStyleConfig: (
 
       &:hover,
       &:focus-visible {
+        color: #fff;
         background: darken(map-get($value, colorPrimary), 10);
         border-color: map-get($value, colorPrimary);
       }
@@ -137,7 +136,6 @@ $colorStyleConfig: (
     //_category
     .category {
       a {
-
         &:hover,
         &:focus,
         &.active {
@@ -152,7 +150,6 @@ $colorStyleConfig: (
     div.function {
       ul {
         li {
-
           button,
           a {
             color: #fff;
@@ -168,7 +165,8 @@ $colorStyleConfig: (
     }
 
     .functionPanel .share .shareButton:hover,
-    .functionPanel .share .shareButton:focus-visible {}
+    .functionPanel .share .shareButton:focus-visible {
+    }
 
     //_language
     .language {
@@ -274,7 +272,6 @@ $colorStyleConfig: (
     //_list
     .lp {
       .list {
-
         & > ul,
         ol {
           border-top: 2px solid map-get($value, colorPrimary);
@@ -292,10 +289,8 @@ $colorStyleConfig: (
 
     //_menu
     .mainMenu {
-
       // 預設選單 ul
       & > ul {
-
         // 第一層選單樣式
         & > li {
           & > a {
@@ -322,7 +317,6 @@ $colorStyleConfig: (
       ul {
         li {
           ul {
-
             // 第二層選單樣式
             li {
               a {
@@ -338,7 +332,6 @@ $colorStyleConfig: (
 
             li.hasChild {
               & > a {
-
                 &:hover,
                 &:focus-visible {
                   background: map-get($value, colorPrimary);
@@ -366,7 +359,6 @@ $colorStyleConfig: (
       .page {
         li {
           a {
-
             &:hover,
             &:focus-visible {
               color: #fff;
@@ -509,7 +501,6 @@ $colorStyleConfig: (
     .submenu {
       li {
         a {
-
           &:hover,
           &:focus-visible {
             border-color: map-get($value, aHover);

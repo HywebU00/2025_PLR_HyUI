@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>電子報版型Rfp</title>
+  <style>
+    body {
+      font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      background-color: #ccc;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .header {
+      max-height: 185px;
+      display: flex;
+      justify-content: center;
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .header>img {
+      position: relative;
+    }
+
+    .header h1 {
+      position: absolute;
+      margin: auto 0;
+
+      top: 30%;
+
+    }
+
+    .header h1 img {
+      width: 200px;
+    }
+
+    .table_info tbody .text-bold {
+      display: inline-block;
+      font-weight: bolder;
+      font-size: 1.5rem;
+      padding: 0 0.5rem;
+    }
+
+    .table_info tbody .text-num {
+      font-weight: bolder;
+      display: block;
+      font-size: 2rem;
+      letter-spacing: 0.1rem;
+      margin: 0 0.5rem;
+    }
+
+    .table_info tbody a {
+      display: inline-block;
+      font-weight: bolder;
+      font-size: 1.5rem;
+      padding: 0 0.5rem;
+    }
+
+
+
+    .table_event {
+      font-size: 16px;
+      width: 100%;
+      margin: 0.5em 0 2em 0;
+    }
+
+    .table_event th {
+      width: 100px;
+      padding: 0.75em;
+      background: #f3f3f3;
+    }
+
+    .table_event td {
+      padding-left: 0.5em;
+    }
+
+    .table_info {
+      font-size: 16px;
+      margin-top: 1.5em;
+    }
+
+    .table_info thead p {
+      margin: 0;
+      text-align: start;
+    }
+
+    .table_info tbody p {
+      padding: 0;
+      margin: 0.5em 0;
+      line-height: 1.75em;
+    }
+
+    .table_info tbody ul {
+      list-style: none;
+      padding: 0;
+      margin: 1em 0 0 0;
+    }
+
+    .table_info tbody li p {
+      display: inline-block;
+      font-weight: 600;
+      margin: 0 0.5em 0 0;
+      color: #333333;
+    }
+
+    .table_info tbody li a {
+      display: inline-block;
+      color: #333333;
+      font-size: 1rem;
+      text-decoration: underline;
+    }
+
+    .table_info tbody li a:hover {
+      color: #666;
+    }
+
+    .dataTable {
+      font-size: 1rem;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    .dataTable th {
+      padding: 0.75em;
+      background: #f3f3f3;
+      white-space: nowrap;
+    }
+
+    .dataTable td {
+      border-bottom: 1px solid #ddd;
+      padding: 0.75rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 電子報 header start -->
+  <table width="900px" align="center" border="0" cellspacing="0" cellpadding="0" style="font-size: 13px">
+
+    <tr>
+      <td></td>
+      <td bgcolor="#fff" class="header" style="height: 100px;" valign="top " width="900">
+        <!--photo end-->
+        <h1>
+          <img class="pc-logo" src="images/h_logo.png" alt="" style="width:300px;">
+        </h1>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td bgcolor="#ffd648" style="height: 15px;" valign="top " width="900"></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><img src="images/top.jpg" width="900" alt="" /></td>
+      </td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td bgcolor="#fff" class="header" style="height: 15px;" valign="top " width="900">
+      <td></td>
+    </tr>
+  </table>
+  <!-- 電子報 header end -->
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" style="font-size: 13px">
+    <tr>
+      <td valign="top " align="center">
+        <table width="900" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td>
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td bgcolor="#fff" width="19" valign="top">&nbsp;</td>
+                  <td valign="top">
+                    <!--細框內 start-->
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#dfdfdf">
+                      <tr>
+                        <td bgcolor="#fff">
+                          <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #fff">
+                            <tr>
+                              <td>
+                                <table width="100%" border="0" cellspacing="0" cellpadding="15">
+                                  <tr>
+                                    <td>
+                                      <!-- 信件內文 start -->
+                                      <table class="table_info">
+                                        <thead>
+                                          <tr>
+                                            <th>
+                                              <p style="font-size: 16px">
+                                                您好：
+                                              </p>
+                                            </th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>
+                                              <p>
+                                                感謝您註冊【公共出借權登記系統暨管理平臺】，為了確認您的郵件正確性，平臺需要驗證後才能啟用您的帳號。
+                                              </p>
+                                              <p>
+                                                以下是您的驗證碼:
+                                              </p>
+                                              <ul>
+                                                <li>
+                                                  <p>帳號:</p>
+                                                  A1******95
+                                                </li>
+                                                <li>
+                                                  <p>Email:</p>
+                                                  abc@gmail.com
+                                                </li>
+                                                <li>
+                                                  <p>獎項:</p>
+                                                  會議甲類
+                                                </li>
+                                                <li>
+                                                  <p>重設密碼:</p>
+                                                  <a href="">
+                                                    請按此連結重設密碼
+                                                  </a>
+                                                </li>
+                                                <li>
+                                                  <p style="margin-top: 20px ;">以下是您的驗證碼:</p>
+                                                  <p class="text-num">234567</p>
+                                                </li>
+                                              </ul>
+
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td style="padding-top: 30px;">
+                                              密碼重設連結於<p class="text-bold">30分鐘後(13:50)</p>失效，請盡快完成設定。如您沒有要求重設密碼或已設定完成，請忽略此電子郵件。
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                      <br />
+                                      <!-- 信件內文 end -->
+                                    </td>
+                                  </tr>
+
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                    <!--細框內 end-->
+                  </td>
+                  <td bgcolor="#fff" width="18" valign="top">&nbsp;</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  <!-- 電子報 內容 end -->
+  <!-- 電子報 footer start -->
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" style="font-size: 15px">
+    <tr>
+      <td valign="top " align="center">
+        <table width="900" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td height="20" bgcolor="#FFFFFF">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td bgcolor="#fff" width="19" height="20">&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td bgcolor="#fff" width="18" height="20">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td bgcolor="#fff" width="19" height="20">&nbsp;</td>
+                  <td bgcolor="#ffffff"></td>
+                  <td bgcolor="#fff" width="18" height="20">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td bgcolor="#fff" width="19" height="20">&nbsp;</td>
+                  <td bgcolor="#fff">&nbsp;</td>
+                  <td bgcolor="#fff" width="18" height="20">&nbsp;</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td align="center" bgcolor="#333" style="font-size: 12px">
+              <p style="padding-bottom: 15px; padding-top: 30px; color: #fff">
+                * 本信件由公共出借權登記暨管理平台系統發送，請勿直接回覆。如有任何問題，請洽本公司客服專線。
+              </p>
+              <hr style="color: #ddd; margin: 0 50px" />
+              <p style="padding-bottom: 5px; padding-top: 15px; color: #fff">文化部版權所有 © 2025 All Rights Reserved.</p>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" bgcolor="#333" style="font-size: 12px">
+              <ul style="padding-bottom: 30px; color: #fff ;text-align: start;list-style: none;padding: 0;width: 220px;margin-top: 0;margin-bottom: 50px;">
+                <li style="margin-bottom: 6px;">客服電話：(02)2395-6966轉OOOO
+                </li>
+                <li style="margin-bottom: 6px;">客服信箱：plrservice@email.com
+                </li>
+                <li>客服服務時間：週一至週五 8:30-17:30</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  <!-- 電子報 footer end -->
+</body>
+
+</html>

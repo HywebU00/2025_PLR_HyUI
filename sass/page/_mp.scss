@@ -365,8 +365,17 @@ section {
 .lazySection {
   padding: rem(60) 0;
   .flexSet {
+    justify-content: center;
     .col {
       flex-basis: calc(100% / 3 - 25px);
+      &:nth-child(2) {
+        margin-left: 32px;
+        margin-right: 32px;
+      }
+      &:last-child {
+        margin-left: 0px;
+        margin-right: 0px;
+      }
     }
   }
   .pic {
@@ -436,6 +445,7 @@ section {
 .stepSection {
   background: #f5f5f5;
   padding: rem(60) 0;
+
   .titleBox {
     padding-top: rem(0);
     display: flex;
