@@ -247,6 +247,30 @@ h2.title {
         background: url(../images/icon_PPT.png) no-repeat;
         background-size: contain;
       }
+      &.file_file {
+        height: 40px;
+        width: 30px;
+        background: url(../images/icon_FILE.png) no-repeat;
+        background-size: contain;
+      }
+      &.file_img {
+        height: 40px;
+        width: 30px;
+        background: url(../images/icon_IMG.png) no-repeat;
+        background-size: contain;
+      }
+      &.file_odf {
+        height: 40px;
+        width: 30px;
+        background: url(../images/icon_ODF.png) no-repeat;
+        background-size: contain;
+      }
+      &.file_xls {
+        height: 40px;
+        width: 30px;
+        background: url(../images/icon_XLS.png) no-repeat;
+        background-size: contain;
+      }
       // &.file_doc,
       // &.file_docx,
       // &.file_odt {
