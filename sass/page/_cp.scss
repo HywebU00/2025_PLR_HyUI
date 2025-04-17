@@ -223,6 +223,7 @@ h2.title {
     span {
       display: flex;
       align-items: center;
+      cursor: pointer;
       &.file_pdf {
         height: 40px;
         width: 30px;
