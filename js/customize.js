@@ -24,19 +24,6 @@ window.addEventListener('load', () => {
     elemClass: '.tableList', // 目標table
     dataName: 'title', // tableList樣式 加上 data-title
   });
-
-  // 手風琴功能
-  accordionFunction({
-    target: '.accordion',
-    openFirst: false, // 預設先展開所有內容，鍵盤的自動開合功能無效
-    autoClose: true, // 點擊時自動關閉已展開的項目，若需要此功能需要關閉openFirst
-    openSwitch: true, // 是否可開合
-    index: 0, // 預設開啟第幾個
-    info: {
-      open: '展開', // 收合時顯示
-      close: '收合', // 展開時顯示
-    },
-  });
 });
 // -----  基本功能開關   ---------------------------------------------------
 
@@ -347,6 +334,7 @@ window.addEventListener('load', () => {
     openFirst: false, // 預設先展開所有內容，使用無障礙遊走不再有手風琴效果，永遠展開內容(滑鼠點擊正常開合)
     autoClose: true, // 點擊時自動關閉已展開的項目，若需要此功能需要關閉openFirst
     duration: 200,
+    index: 0, // 預設開啟第幾個
     info: {
       open: '', // 收合時顯示
       close: '', // 展開時顯示

@@ -1869,152 +1869,152 @@ let lazyLoadInstance = new LazyLoad({
 // -----   Accordion設定   ------------------------------------------------
 // -----------------------------------------------------------------------
 
-function accordionFunction(obj) {
-  'use strict';
-  const accordion = document.querySelector(obj.target);
-  const autoClose = obj.autoClose;
-  const openSwitch = obj.openSwitch;
-  const openFirst = obj.openFirst;
-  const { open, close } = obj.info;
+// function accordionFunction(obj) {
+//   'use strict';
+//   const accordion = document.querySelector(obj.target);
+//   const autoClose = obj.autoClose;
+//   const openSwitch = obj.openSwitch;
+//   const openFirst = obj.openFirst;
+//   const { open, close } = obj.info;
 
-  if (accordion) {
-    let id = [];
-    let accordionState;
-    const accordionList = accordion.querySelectorAll('.accordionList');
-    const accordionBtn = accordion.querySelectorAll('.accordionBtn');
-    const accordionContent = accordion.querySelectorAll('.accordionContent');
+//   if (accordion) {
+//     let id = [];
+//     let accordionState;
+//     const accordionList = accordion.querySelectorAll('.accordionList');
+//     const accordionBtn = accordion.querySelectorAll('.accordionBtn');
+//     const accordionContent = accordion.querySelectorAll('.accordionContent');
 
-    const count = accordionList.length;
-    let nowIndex = obj.index === null ? null : obj.index <= count ? obj.index : count;
-    const lastTab = accordionList[accordionList.length - 1];
+//     const count = accordionList.length;
+//     let nowIndex = obj.index === null ? null : obj.index <= count ? obj.index : count;
+//     const lastTab = accordionList[accordionList.length - 1];
 
-    for (let i = 0; i < accordionList.length; i++) {
-      id.push(`accordion_${randomLetter(3)}${randomFloor(0, 999)}`);
-    }
+//     for (let i = 0; i < accordionList.length; i++) {
+//       id.push(`accordion_${randomLetter(3)}${randomFloor(0, 999)}`);
+//     }
 
-    const init = () => {
-      accordionList.forEach((content) => content.classList.remove('active'));
-      // 增加無障礙設置
-      accordionList.forEach((item, index) => {
-        accordionBtn[index].insertAdjacentHTML('beforeend', `<span class="accordionState">${open}</span>`);
-        accordionBtn[index].insertAdjacentHTML('beforeend', `<span class="accordionArrow"></span>`);
-        accordionBtn[index].setAttribute('aria-expanded', 'false');
-        accordionBtn[index].setAttribute('aria-controls', id[index]);
-        accordionBtn[index].setAttribute('role', 'button');
-        accordionContent[index].setAttribute('id', id[index]);
-        accordionContent[index].setAttribute('aria-labelledby', id[index]);
-        accordionState = accordion.querySelectorAll('.accordionState');
-      });
+//     const init = () => {
+//       accordionList.forEach((content) => content.classList.remove('active'));
+//       // 增加無障礙設置
+//       accordionList.forEach((item, index) => {
+//         accordionBtn[index].insertAdjacentHTML('beforeend', `<span class="accordionState">${open}</span>`);
+//         accordionBtn[index].insertAdjacentHTML('beforeend', `<span class="accordionArrow"></span>`);
+//         accordionBtn[index].setAttribute('aria-expanded', 'false');
+//         accordionBtn[index].setAttribute('aria-controls', id[index]);
+//         accordionBtn[index].setAttribute('role', 'button');
+//         accordionContent[index].setAttribute('id', id[index]);
+//         accordionContent[index].setAttribute('aria-labelledby', id[index]);
+//         accordionState = accordion.querySelectorAll('.accordionState');
+//       });
 
-      if (nowIndex !== null) {
-        accordionList[nowIndex].classList.add('active');
-        accordionBtn[nowIndex].setAttribute('aria-expanded', 'true');
-        jsSlideDown(accordionContent[nowIndex]);
-        accordionState[nowIndex].textContent = close;
-      }
-    };
+//       if (nowIndex !== null) {
+//         accordionList[nowIndex].classList.add('active');
+//         accordionBtn[nowIndex].setAttribute('aria-expanded', 'true');
+//         jsSlideDown(accordionContent[nowIndex]);
+//         accordionState[nowIndex].textContent = close;
+//       }
+//     };
 
-    init();
+//     init();
 
-    // 預先展開模式
-    function openCheck() {
-      if (!openFirst && nowIndex !== null) {
-        const siblings = Array.prototype.filter.call(accordionContent[nowIndex].parentElement.parentElement.children, (child) => {
-          return child !== accordionContent[nowIndex].parentElement;
-        });
-        siblings.forEach((item) => jsSlideUp(item.querySelector('.accordionContent')));
-      } else if (!openFirst && nowIndex === null) {
-        accordionContent.forEach((item) => jsSlideUp(item));
-      } else {
-        accordionState.forEach((item) => (item.textContent = close));
-        accordionContent.forEach((item) => jsSlideDown(item));
-        // 預先展開模式
-        openFirst ? accordionList.forEach((item) => item.classList.add('active')) : null;
-      }
-    }
-    openCheck();
+//     // 預先展開模式
+//     function openCheck() {
+//       if (!openFirst && nowIndex !== null) {
+//         const siblings = Array.prototype.filter.call(accordionContent[nowIndex].parentElement.parentElement.children, (child) => {
+//           return child !== accordionContent[nowIndex].parentElement;
+//         });
+//         siblings.forEach((item) => jsSlideUp(item.querySelector('.accordionContent')));
+//       } else if (!openFirst && nowIndex === null) {
+//         accordionContent.forEach((item) => jsSlideUp(item));
+//       } else {
+//         accordionState.forEach((item) => (item.textContent = close));
+//         accordionContent.forEach((item) => jsSlideDown(item));
+//         // 預先展開模式
+//         openFirst ? accordionList.forEach((item) => item.classList.add('active')) : null;
+//       }
+//     }
+//     openCheck();
 
-    accordionList.forEach((item, index) => {
-      const itemAllTarget = accordionContent[index].querySelectorAll('a,button,input,textarea,select');
-      const firstItem = [...itemAllTarget][0];
-      const lastItem = [...itemAllTarget][itemAllTarget.length - 1];
-      const prevItemAllTarget = accordionContent[index - 1]?.querySelectorAll('a,button,input,textarea,select');
-      const siblings = Array.prototype.filter.call(accordionList[index].parentElement.children, (child) => {
-        return child !== accordionList[index];
-      });
+//     accordionList.forEach((item, index) => {
+//       const itemAllTarget = accordionContent[index].querySelectorAll('a,button,input,textarea,select');
+//       const firstItem = [...itemAllTarget][0];
+//       const lastItem = [...itemAllTarget][itemAllTarget.length - 1];
+//       const prevItemAllTarget = accordionContent[index - 1]?.querySelectorAll('a,button,input,textarea,select');
+//       const siblings = Array.prototype.filter.call(accordionList[index].parentElement.children, (child) => {
+//         return child !== accordionList[index];
+//       });
 
-      // 點擊
-      if (openSwitch) {
-        accordionBtn[index].addEventListener('click', (e) => {
-          e.preventDefault();
-          siblings.forEach((content) => content.classList.remove('active'));
-          accordionList[index].classList.toggle('active');
-          jsSlideToggle(accordionContent[index]);
-          accordionState[index].textContent === close ? (accordionState[index].textContent = open) : (accordionState[index].textContent = close);
+//       // 點擊
+//       if (openSwitch) {
+//         accordionBtn[index].addEventListener('click', (e) => {
+//           e.preventDefault();
+//           siblings.forEach((content) => content.classList.remove('active'));
+//           accordionList[index].classList.toggle('active');
+//           jsSlideToggle(accordionContent[index]);
+//           accordionState[index].textContent === close ? (accordionState[index].textContent = open) : (accordionState[index].textContent = close);
 
-          nowIndex = index;
+//           nowIndex = index;
 
-          if (autoClose) {
-            siblings.forEach((con) => {
-              jsSlideUp(con.querySelector('.accordionContent'));
-              con.classList.remove('active');
-              con.querySelector('.accordionBtn').setAttribute('aria-expanded', 'false');
-            });
-          }
-        });
+//           if (autoClose) {
+//             siblings.forEach((con) => {
+//               jsSlideUp(con.querySelector('.accordionContent'));
+//               con.classList.remove('active');
+//               con.querySelector('.accordionBtn').setAttribute('aria-expanded', 'false');
+//             });
+//           }
+//         });
 
-        // 鍵盤
-        accordionBtn[index].addEventListener('keydown', function (e) {
-          accordionList[index].classList.add('active');
-          accordionState[index].textContent = close;
-          nowIndex = index;
+//         // 鍵盤
+//         accordionBtn[index].addEventListener('keydown', function (e) {
+//           accordionList[index].classList.add('active');
+//           accordionState[index].textContent = close;
+//           nowIndex = index;
 
-          if (autoClose & !openFirst) {
-            siblings.forEach((con) => {
-              siblings.forEach((content) => content.classList.remove('active'));
-              jsSlideUp(con.querySelector('.accordionContent'));
-              con.querySelector('.accordionState').textContent = open;
-              con.classList.remove('active');
-            });
-          }
+//           if (autoClose & !openFirst) {
+//             siblings.forEach((con) => {
+//               siblings.forEach((content) => content.classList.remove('active'));
+//               jsSlideUp(con.querySelector('.accordionContent'));
+//               con.querySelector('.accordionState').textContent = open;
+//               con.classList.remove('active');
+//             });
+//           }
 
-          if (e.which === 9 && !e.shiftKey) {
-            jsSlideDown(accordionContent[index]);
-            if (itemAllTarget.length > 0) {
-              e.preventDefault();
-              firstItem?.focus();
-            } else if (itemAllTarget.length === 0) {
-              accordionList[index + 1]?.focus();
-            }
-          } else if (e.which === 9 && e.shiftKey) {
-            e.preventDefault();
-            jsSlideDown(accordionContent[index]);
-            if (itemAllTarget.length > 0) {
-              lastItem?.focus();
-            } else if (itemAllTarget.length === 0) {
-              accordionBtn[index - 1]?.focus();
-            }
-          }
-        });
-      }
+//           if (e.which === 9 && !e.shiftKey) {
+//             jsSlideDown(accordionContent[index]);
+//             if (itemAllTarget.length > 0) {
+//               e.preventDefault();
+//               firstItem?.focus();
+//             } else if (itemAllTarget.length === 0) {
+//               accordionList[index + 1]?.focus();
+//             }
+//           } else if (e.which === 9 && e.shiftKey) {
+//             e.preventDefault();
+//             jsSlideDown(accordionContent[index]);
+//             if (itemAllTarget.length > 0) {
+//               lastItem?.focus();
+//             } else if (itemAllTarget.length === 0) {
+//               accordionBtn[index - 1]?.focus();
+//             }
+//           }
+//         });
+//       }
 
-      // 內容鍵盤遊走
-      itemAllTarget.forEach((n, i) => {
-        if (n) {
-          n.addEventListener('keydown', function (e) {
-            if (e.which === 9 && e.shiftKey) {
-              if (e.target === firstItem) {
-                accordionBtn[index]?.focus();
-              } else if (itemAllTarget.length === 0) {
-                accordionBtn[index - 1]?.focus();
-              }
-            }
-          });
-        }
-      });
-    });
-  }
-}
+//       // 內容鍵盤遊走
+//       itemAllTarget.forEach((n, i) => {
+//         if (n) {
+//           n.addEventListener('keydown', function (e) {
+//             if (e.which === 9 && e.shiftKey) {
+//               if (e.target === firstItem) {
+//                 accordionBtn[index]?.focus();
+//               } else if (itemAllTarget.length === 0) {
+//                 accordionBtn[index - 1]?.focus();
+//               }
+//             }
+//           });
+//         }
+//       });
+//     });
+//   }
+// }
 
 // accordionFunction({
 //   target: '.accordion',
