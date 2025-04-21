@@ -952,6 +952,8 @@ section {
   &:has(.alert) {
     height: rem(72);
     background: #ffffff;
+    position: relative;
+    z-index: 9;
     @include screen('tablet') {
       height: unset;
     }
