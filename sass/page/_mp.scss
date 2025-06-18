@@ -233,18 +233,28 @@ section {
   }
 }
 .img-container {
-  height: 250px;
+  // height: 250px;
   position: relative;
-  background: url(../images/top.jpg) no-repeat center center;
-  background-size: cover;
-  object-fit: contain;
+  img {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+  }
+  // background: url(../images/top.jpg) no-repeat center center;
+  // background-size: cover;
+  // object-fit: contain;
   @include screen('tablet') {
-    height: rem(180);
+    img {
+      height: rem(180);
+    }
   }
   @include screen('mobile') {
-    height: rem(120);
+    img {
+      height: rem(120);
+    }
   }
 }
+
 .newsList {
   background-color: #f0f0f0;
   padding-bottom: rem(70);
